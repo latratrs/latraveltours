@@ -104,3 +104,38 @@ The AI's workflow is iterative, transparent, and responsive to user input.
   2. **Dependency Check:** If a `package.json` was modified, AI runs `npm install`.  
   3. **Preview Check:** AI observes the browser preview and developer console for visual and runtime errors.  
   4. **Remediation/Report:** If errors are found, AI attempts automatic fixes. If unsuccessful, it reports details to the user.
+
+## 10\. Recommended Tool Workflow in Firebase Studio
+
+Use the tools as a pipeline instead of asking each tool to do everything:
+
+1. **Gemini 2.5 Pro in Google AI Studio on the right side of Firebase Studio**
+   * Use for planning, trade-off analysis, debugging strategy, and reviewing diffs.
+   * Ask for a short plan, affected files, risks, and validation steps before editing.
+2. **GitHub Copilot inside the editor**
+   * Use for inline code completion, local refactors, repetitive markup, and file-scoped edits.
+   * Keep prompts narrow so Copilot stays focused on the file you are editing.
+3. **Firebase CLI in the terminal**
+   * Use for running Astro, Firebase emulators, deploy commands, and environment verification.
+   * Validate after each meaningful change instead of waiting until the end.
+
+### Recommended split
+
+* **Gemini thinks**
+* **Copilot types**
+* **Firebase CLI verifies**
+
+### Fast loop
+
+1. Ask Gemini for the smallest safe plan.
+2. Apply the change with Copilot in the editor.
+3. Run validation commands in the terminal.
+4. Return to Gemini with the diff or error output for a final review.
+
+### Good prompt for Gemini
+
+> I am editing an Astro project in Firebase Studio. Give me the smallest safe implementation plan, affected files, likely risks, and the exact validation commands I should run. Also tell me what should be handled by Gemini versus GitHub Copilot.
+
+### Good prompt for Copilot
+
+> Update only this file to match the agreed plan. Keep the change minimal, preserve the existing style, and do not modify unrelated code.
