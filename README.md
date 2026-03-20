@@ -88,7 +88,7 @@ That setup keeps:
 
 ### Prompt for Gemini 2.5 Pro
 
-> I am working in Firebase Studio on an Astro project. Give me the smallest safe plan for this task, list affected files, suggest validation commands, and tell me what should be done by Gemini vs GitHub Copilot.
+> I am working in Firebase Studio on an Astro project. Give me the smallest safe plan for this task, list affected files, suggest validation commands, and tell me what should be done by Gemini, GitHub Copilot, and Firebase CLI.
 
 ### Prompt for Copilot Chat
 
