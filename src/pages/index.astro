@@ -1,11 +1,22 @@
 ---
+import { getCollection } from 'astro:content';
 import Welcome from '../components/Welcome.astro';
 import Layout from '../layouts/Layout.astro';
 
-// Welcome to Astro! Wondering what to do next? Check out the Astro documentation at https://docs.astro.build
-// Don't want to use any of this? Delete everything in this file, the `assets`, `components`, and `layouts` directories, and start fresh.
+const tours = (await getCollection('tours')).sort((left, right) => {
+  if (left.data.featured === right.data.featured) {
+    return right.data.rating - left.data.rating;
+  }
+
+  return Number(right.data.featured) - Number(left.data.featured);
+});
+
+const featuredCount = tours.filter((tour) => tour.data.featured).length;
 ---
 
-<Layout>
-	<Welcome />
+<Layout
+  title="Latravel Tours | Thailand experiences curated for mobile-first discovery"
+  description="Browse featured Thailand tours with ratings, clear pricing, and fast Astro-rendered marketplace cards."
+>
+  <Welcome tours={tours} featuredCount={featuredCount} />
 </Layout>
