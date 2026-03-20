@@ -6,14 +6,14 @@ Latravel Tours is a static-first Astro project configured for Firebase Studio. T
 
 ## Current project outline
 
-- Homepage rendered from `/home/runner/work/latraveltours/latraveltours/src/pages/index.astro`
-- Shared presentation in `/home/runner/work/latraveltours/latraveltours/src/components/Welcome.astro`
-- Base HTML shell in `/home/runner/work/latraveltours/latraveltours/src/layouts/Layout.astro`
-- Structured tour content defined in `/home/runner/work/latraveltours/latraveltours/src/content.config.ts`
-- Tour entries stored under `/home/runner/work/latraveltours/latraveltours/src/content/tours/`
-- Firebase Studio environment configured in `/home/runner/work/latraveltours/latraveltours/.idx/dev.nix`
-- Firebase hosting configuration stored in `/home/runner/work/latraveltours/latraveltours/firebase.json`
-- Repository guidance stored in `/home/runner/work/latraveltours/latraveltours/README.md` and `/home/runner/work/latraveltours/latraveltours/GEMINI.md`
+- Homepage rendered from `src/pages/index.astro`
+- Shared presentation in `src/components/Welcome.astro`
+- Base HTML shell in `src/layouts/Layout.astro`
+- Structured tour content defined in `src/content.config.ts`
+- Tour entries stored under `src/content/tours/`
+- Firebase Studio environment configured in `.idx/dev.nix`
+- Firebase hosting configuration stored in `firebase.json`
+- Repository guidance stored in `README.md` and `GEMINI.md`
 
 ## Current change plan
 

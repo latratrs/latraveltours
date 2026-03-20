@@ -11,7 +11,7 @@ Static-first Astro site for Firebase Studio with a simple workflow guide for usi
 
 ## Local commands
 
-Run commands from `/home/runner/work/latraveltours/latraveltours`.
+Run commands from the project root.
 
 | Command | Purpose |
 | --- | --- |
